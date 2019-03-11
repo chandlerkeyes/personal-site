@@ -44,7 +44,7 @@ jobs:
             heroku config:set GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` --app personal-site-dev
       - run:
           name: Deploy
-          command: git push --force git.heroku.com/personal-site-dev.git $CIRCLE_SHA1:refs/heads/master
+          command: git push --force git@heroku.com:personal-site-dev.git $CIRCLE_SHA1:refs/heads/master
 
   deploy-prod:
     docker:
@@ -59,7 +59,7 @@ jobs:
             heroku config:set GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` --app personal-site-prod
       - run:
           name: Deploy
-          command: git push --force git.heroku.com/personal-site-prod.git $CIRCLE_SHA1:refs/heads/master        
+          command: git push --force git@heroku.com:personal-site-prod.git $CIRCLE_SHA1:refs/heads/master        
 
 workflows:
   version: 2
