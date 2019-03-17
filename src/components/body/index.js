@@ -9,7 +9,7 @@ import Home from '../home';
 
 const Route = require("react-router-dom").Route;
 
-class Body extends Component {
+class Body extends React.Component {
   render() {
     return (
       <div className="body">

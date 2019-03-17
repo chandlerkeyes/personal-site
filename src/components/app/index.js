@@ -4,7 +4,7 @@ import Navigation from '../navigation';
 import Body from '../body';
 import Footer from '../footer';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
         <div className="app" id="app">

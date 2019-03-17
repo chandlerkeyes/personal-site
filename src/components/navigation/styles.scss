@@ -1,17 +1,19 @@
-@import '../constants/styles.scss';
+@import 'src/constants/fonts.scss';
+@import 'src/constants/themes.scss';
 
 .navigation {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: black;
+  background-color: $navy-blue;
   .container {
     width: 960px;
     margin: auto;
     .links {
-      text-align: center;
+      display: flex;
+      justify-content: center;
       a {
-        color: white;
+        color: $neon;
         padding: 20px;
         font-family: $yantra;
         font-size: 36px;
