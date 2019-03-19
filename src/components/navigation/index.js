@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Link from '../link';
+import React from 'react';
+import MenuItem from '../menu-item';
 import { PAGES } from '../../constants/routes.js';
 import './styles.scss';
 
@@ -9,10 +9,10 @@ class Navigation extends React.Component {
       <div className="navigation">
        <div className="container">
         <div className="links">
-          <Link to={PAGES.HOME} name="Home" />
-          <Link to={PAGES.ABOUT} name="About" />
-          <Link to={PAGES.TECH} name="Tech" />
-          <Link to={PAGES.CONTACT} name="Contact" />
+          <MenuItem to={PAGES.HOME} name="Home" />
+          <MenuItem to={PAGES.ABOUT} name="About" />
+          <MenuItem to={PAGES.TECH} name="Tech" />
+          <MenuItem to={PAGES.CONTACT} name="Contact" />
         </div>
        </div>
       </div>
