@@ -1,5 +1,5 @@
-@import 'src/constants/fonts.scss';
-@import 'src/constants/themes.scss';
+@import 'src/client/constants/fonts.scss';
+@import 'src/client/constants/themes.scss';
 
 .navigation {
   width: 100%;
@@ -13,8 +13,7 @@
       display: flex;
       justify-content: center;
       a {
-        color: $neon;
-        padding: 20px;
+        color: $white;
         font-family: $yantra;
         font-size: 36px;
       }
