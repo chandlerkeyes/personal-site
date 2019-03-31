@@ -1,0 +1,9 @@
+.menu-item {
+  width: 200px;
+  .active-menu-item {
+    display: flex;
+    .active {
+      font-size: 100px;
+    }
+  }
+}

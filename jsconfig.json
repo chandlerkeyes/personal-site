@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es6",
+    "baseUrl": ".",
+    "module": "commonjs",
+    "allowJs": true,
+    "paths": {
+      "@Client/*": ["client/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
