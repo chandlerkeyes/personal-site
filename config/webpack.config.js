@@ -184,7 +184,7 @@ module.exports = function(webpackEnv) {
               ecma: 8,
             },
             compress: {
-              ecma: 5,
+              // ecma: 5,
               warnings: false,
               // Disabled because of an issue with Uglify breaking seemingly valid code:
               // https://github.com/facebook/create-react-app/issues/2376
@@ -286,6 +286,9 @@ module.exports = function(webpackEnv) {
       ],
     },
     module: {
+      // loaders: [
+      //   { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+      // ],
       strictExportPresence: true,
       rules: [
         // Disable require.ensure as it's not a standard language feature.
@@ -297,13 +300,20 @@ module.exports = function(webpackEnv) {
           test: /\.(js|mjs|jsx)$/,
           enforce: 'pre',
           use: [
+            'file-loader',
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                bypassOnDebug: true,
+              },
+            },
             {
               options: {
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
                 eslintPath: require.resolve('eslint'),
                 
               },
-              loader: require.resolve('eslint-loader'),
+              // loader: require.resolve('eslint-loader'),
             },
           ],
           include: paths.appSrc,
@@ -412,7 +422,7 @@ module.exports = function(webpackEnv) {
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
-                modules: true,
+                // modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               }),
             },
@@ -593,8 +603,8 @@ module.exports = function(webpackEnv) {
             '!**/*.json',
             '!**/__tests__/**',
             '!**/?(*.)(spec|test).*',
-            '!**/src/setupProxy.*',
-            '!**/src/setupTests.*',
+            '!**/client/src/setupProxy.*',
+            '!**/client/src/setupTests.*',
           ],
           watch: paths.appSrc,
           silent: true,

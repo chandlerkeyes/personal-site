@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from "react-router-dom";
 import './index.css';
-import App from './components/app';
+import App from './client/components/app';
 import * as serviceWorker from './serviceWorker';
-import history from "./history";
+import createHistory from "history/createBrowserHistory";
+
+export const history = createHistory();
 
 ReactDOM.render(
   <Router history={history}>

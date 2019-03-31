@@ -2,11 +2,12 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es6",
-    "baseUrl": ".",
+    "baseUrl": "./src/",
     "module": "commonjs",
+    "checkJs": true,
     "allowJs": true,
     "paths": {
-      "@Client/*": ["client/*"]
+      "@Client/*": ["src/client/*"]
     }
   },
   "exclude": [

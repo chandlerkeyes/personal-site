@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './styles.scss';
+// import ACTIVE_DOT from "../../assets/circle.svg";
 
-const ACTIVE_DOT = require('@Client/src/assets/dot.png');
+// const ACTIVE_DOT = require('../../assets/circle.svg');
 
 export default class MenuItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { active: false };
     this.onClickHandler = this.onClickHandler.bind(this);
   }
@@ -16,7 +17,7 @@ export default class MenuItem extends React.Component {
   }
 
   renderActiveDot() {
-    return this.state.active ? <div className="active"><img src=""/></div> : null;
+    return this.state.active ? <div className="active"><img src={""}/></div> : null;
   }
 
   renderItemName() {
