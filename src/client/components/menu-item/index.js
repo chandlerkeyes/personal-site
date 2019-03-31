@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './styles.scss';
-// import ACTIVE_DOT from "../../assets/circle.svg";
+import ACTIVE_DOT from "../../assets/circle.svg";
 
 // const ACTIVE_DOT = require('../../assets/circle.svg');
 
@@ -17,7 +17,7 @@ export default class MenuItem extends React.Component {
   }
 
   renderActiveDot() {
-    return this.state.active ? <div className="active"><img src={""}/></div> : null;
+    return this.state.active ? <div className="active"><img src={ACTIVE_DOT} alt="Active Dot"/></div> : null;
   }
 
   renderItemName() {

@@ -4,6 +4,10 @@
     display: flex;
     .active {
       font-size: 100px;
+      img {
+        width: 10px;
+        position: absolute;
+      }
     }
   }
 }
