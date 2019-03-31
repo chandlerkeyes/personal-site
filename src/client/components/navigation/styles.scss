@@ -2,15 +2,24 @@
 @import 'src/client/constants/themes.scss';
 
 .navigation {
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 300px;
+  height: 100%;
+  padding: 30px 0px;
   background-color: $navy-blue;
+  transition: all 1s ease;
+  .menu-icon {
+    float: right;
+    padding-right: 20px;
+    img {
+      width: 30px;
+    }
+  }
   .container {
-    width: 960px;
-    margin: auto;
+    height: 100%;
+    margin: 25%;
     .links {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       a {
         color: $white;

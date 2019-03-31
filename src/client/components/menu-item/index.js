@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './styles.scss';
-import ACTIVE_DOT from "../../assets/circle.svg";
+import onClickOutside from "react-onclickoutside";
 
-// const ACTIVE_DOT = require('../../assets/circle.svg');
+import ActiveDot from "../../assets/circle.svg";
 
-export default class MenuItem extends React.Component {
+class MenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
     this.onClickHandler = this.onClickHandler.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  handleClickOutside() {
+    this.setState({ active: false });
   }
 
   onClickHandler() {
@@ -17,12 +22,12 @@ export default class MenuItem extends React.Component {
   }
 
   renderActiveDot() {
-    return this.state.active ? <div className="active"><img src={ACTIVE_DOT} alt="Active Dot"/></div> : null;
+    return this.state.active ? <div className="active"><img src={ActiveDot} alt="Active Dot"/></div> : null;
   }
 
   renderItemName() {
     if (this.state.active) {
-      return <div className="active-menu-item">{this.renderActiveDot()} {this.props.name}</div>;
+      return <div className="active-menu-item">{this.renderActiveDot()} <div className="active-menu-item-name">{this.props.name}</div></div>;
     } 
     return this.props.name;
   }
@@ -35,3 +40,5 @@ export default class MenuItem extends React.Component {
     );
   }
 }
+
+export default onClickOutside(MenuItem);
