@@ -1,20 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './styles.scss';
-import onClickOutside from "react-onclickoutside";
 
 import ActiveDot from "../../assets/circle.svg";
 
-class MenuItem extends React.Component {
+export default class MenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
     this.onClickHandler = this.onClickHandler.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
-  }
-
-  handleClickOutside() {
-    this.setState({ active: false });
   }
 
   onClickHandler() {
@@ -40,5 +35,3 @@ class MenuItem extends React.Component {
     );
   }
 }
-
-export default onClickOutside(MenuItem);

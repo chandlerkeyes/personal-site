@@ -22,6 +22,7 @@ class Navigation extends React.Component {
   menuIconClicked() {
     this.setState({ menuOpened: !this.state.menuOpened });
   }
+  
   render() {
     return (
       <div className="navigation" style={this.slideMenu()}>
