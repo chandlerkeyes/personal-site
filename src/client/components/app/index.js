@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import Body from '../body';
+import { withRouter } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
@@ -12,4 +13,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

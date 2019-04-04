@@ -1,13 +1,7 @@
-import { createStore, compose } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import { createStore } from "redux";
+import reducers from '../reducers';
 
-// importing the root reducer
-import { reducers } from './reducers'
+const store = createStore(reducers);
 
-// set the default application state
-const defaultState = {};
+export default store;
 
-export default store = createStore(reducers, defaultState);
-
-export const history = syncHistoryWithStore(browserHistory, store);

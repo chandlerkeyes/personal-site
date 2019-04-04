@@ -1,3 +1,18 @@
-import { combineReducers } from 'redux';
+import { ActionTypes } from "../../client/actions";
 
-export const reducers = combineReducers({});
+const initialState = {
+  activeMenuItem: "Home"
+};
+
+function rootReducer(state = initialState, action) {
+  switch(action.type) {
+    case ActionTypes.MENU_ITEM_CLICKED:
+      return {
+        ...state,
+        activeMenuItem: action.menuItemSelected
+      }
+    default:
+      return state;
+  }
+};
+export default rootReducer;
