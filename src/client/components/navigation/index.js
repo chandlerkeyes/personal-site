@@ -2,7 +2,6 @@ import React from 'react';
 import MenuItem from '../menu-item';
 import { PAGES } from '../../constants/routes.js';
 import './styles.scss';
-
 import NavigationMenuIcon from "../../assets/menu.svg";
 
 const CLOSE_MENU_MARGIN = -230;

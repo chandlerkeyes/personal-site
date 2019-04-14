@@ -1,5 +1,4 @@
 const MENU_ITEM_CLICKED = "MENU_ITEM_CLICKED";
-const REDUX_ROUTER_ROUTE_CHANGED_ACTION = "@@router/LOCATION_CHANGE";
 
 function menuItemClickedAction(menuItemSelected) {
   return {
