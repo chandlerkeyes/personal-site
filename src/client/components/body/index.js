@@ -6,7 +6,7 @@ import Tech from '../tech';
 import Contact from '../contact';
 import { Switch } from 'react-router-dom';
 import Home from '../home';
-import Navigation from '../navigation';
+import SideNavigation from '../navigation';
 import Footer from '../footer';
 import TopNavigationBar from "../top-navigation-bar/";
 
@@ -16,7 +16,7 @@ class Body extends React.Component {
   render() {
     return (
       <div className="body">
-        <Navigation/>
+        <SideNavigation/>
         <div className="content">
           <TopNavigationBar/>
           <Switch>

@@ -1,23 +1,23 @@
 import React from 'react';
 import { BREAKPOINTS } from "../../constants/breakpoints.js";
 import MediaQuery from 'react-responsive';
-import TopNavigationBarDesktop from './desktop';
-import TopNavigationBarMobile from './mobile';
+import SideNavigationDesktop from './desktop';
+import SideNavigationMobile from './mobile';
 import "./styles.scss"
 
-class TopNavigationBar extends React.Component {
+class SideNavigation extends React.Component {
   render() {
     return (
       <div className="navigation">
         <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
-          <TopNavigationBarDesktop/>
+          <SideNavigationDesktop/>
         </MediaQuery>
         <MediaQuery maxWidth={BREAKPOINTS.TABLET_MIN}>
-          <TopNavigationBarMobile/>
+          <SideNavigationMobile/>
         </MediaQuery>
       </div>
     );
   }
 }
 
-export default TopNavigationBar;
+export default SideNavigation;

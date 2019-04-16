@@ -6,7 +6,7 @@ import NavigationMenuIcon from "../../../assets/menu.svg";
 
 const CLOSE_MENU_MARGIN = -230;
 
-class NavigationDesktop extends React.Component {
+class SideNavigationDesktop extends React.Component {
   constructor(props) {
     super(props);
     
@@ -39,4 +39,4 @@ class NavigationDesktop extends React.Component {
   }
 }
 
-export default NavigationDesktop;
+export default SideNavigationDesktop;

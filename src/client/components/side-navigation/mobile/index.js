@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NavigationMobile extends React.Component {
+class SideNavigationMobile extends React.Component {
   render() {
     return (
       <div className="navigation-mobile">
@@ -10,4 +10,4 @@ class NavigationMobile extends React.Component {
   }
 }
 
-export default NavigationMobile;
+export default SideNavigationMobile;
