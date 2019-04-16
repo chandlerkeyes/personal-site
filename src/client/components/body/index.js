@@ -8,7 +8,7 @@ import { Switch } from 'react-router-dom';
 import Home from '../home';
 import Navigation from '../navigation';
 import Footer from '../footer';
-import TopNavigationBar from "../top-navigation-bar";
+import TopNavigationBar from "../top-navigation-bar/";
 
 const Route = require("react-router-dom").Route;
 
@@ -16,9 +16,9 @@ class Body extends React.Component {
   render() {
     return (
       <div className="body">
-        <TopNavigationBar/>
         <Navigation/>
         <div className="content">
+          <TopNavigationBar/>
           <Switch>
             <Route exact path={PAGES.HOME} component={Home}/>
             <Route exact path={PAGES.ABOUT} component={About}/>
