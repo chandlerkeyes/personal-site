@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import ActiveDot from "../../assets/circle.svg";
+import { ASSETS } from "../../assets";
 import store from '../../store/index.js';
 import { Actions } from '../../actions';
 import { connect } from "react-redux";
@@ -18,7 +18,7 @@ class MenuItem extends React.Component {
 
   renderActiveDot() {
     if (this.props.activeMenuItem === this.props.name) {
-      return <div className="active"><img src={ActiveDot} alt="Active Dot"/></div>
+      return <div className="active"><img src={ASSETS.CIRCLE} alt="Active Dot"/></div>
     }
     return null;
   }

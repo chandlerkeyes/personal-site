@@ -6,9 +6,11 @@ import Tech from '../tech';
 import Contact from '../contact';
 import { Switch } from 'react-router-dom';
 import Home from '../home';
-import SideNavigation from '../navigation';
+import MediaQuery from 'react-responsive';
+import SideNavigation from '../side-navigation';
 import Footer from '../footer';
 import TopNavigationBar from "../top-navigation-bar/";
+import { BREAKPOINTS } from '../../constants/breakpoints';
 
 const Route = require("react-router-dom").Route;
 
@@ -16,7 +18,9 @@ class Body extends React.Component {
   render() {
     return (
       <div className="body">
-        <SideNavigation/>
+        <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
+          <SideNavigation/>
+        </MediaQuery>
         <div className="content">
           <TopNavigationBar/>
           <Switch>

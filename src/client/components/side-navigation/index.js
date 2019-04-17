@@ -1,20 +1,39 @@
 import React from 'react';
-import { BREAKPOINTS } from "../../constants/breakpoints.js";
-import MediaQuery from 'react-responsive';
-import SideNavigationDesktop from './desktop';
-import SideNavigationMobile from './mobile';
-import "./styles.scss"
+import MenuItem from '../menu-item';
+import { PAGES } from '../../constants/routes.js';
+import './styles.scss';
+import { ASSETS } from "../../assets/";
+
+const CLOSE_MENU_MARGIN = -230;
 
 class SideNavigation extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { menuOpened: false };
+    this.menuIconClicked = this.menuIconClicked.bind(this);
+  }
+
+  slideMenu() {
+    return (this.state.menuOpened ? {}: { marginLeft: CLOSE_MENU_MARGIN })
+  }
+
+  menuIconClicked() {
+    this.setState({ menuOpened: !this.state.menuOpened });
+  }
+  
   render() {
     return (
-      <div className="navigation">
-        <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
-          <SideNavigationDesktop/>
-        </MediaQuery>
-        <MediaQuery maxWidth={BREAKPOINTS.TABLET_MIN}>
-          <SideNavigationMobile/>
-        </MediaQuery>
+      <div className="side-navigation" style={this.slideMenu()}>
+        <div className="menu-icon"><img src={ASSETS.NAV_MENU_ICON} alt="Menu Icon" onClick={() => { this.menuIconClicked() }} /></div>
+       <div className="container">
+        <div className="links">
+          <MenuItem to={PAGES.HOME} name="Home" />
+          <MenuItem to={PAGES.ABOUT} name="About" />
+          <MenuItem to={PAGES.TECH} name="Tech" />
+          <MenuItem to={PAGES.CONTACT} name="Contact" />
+        </div>
+       </div>
       </div>
     );
   }
