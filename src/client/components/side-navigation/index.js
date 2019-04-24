@@ -3,6 +3,7 @@ import MenuItem from '../menu-item';
 import { PAGES } from '../../constants/routes.js';
 import './styles.scss';
 import { ASSETS } from "../../assets/";
+import onClickOutside from "react-onclickoutside";
 
 const CLOSE_MENU_MARGIN = -230;
 
@@ -12,6 +13,10 @@ class SideNavigation extends React.Component {
     
     this.state = { menuOpened: false };
     this.menuIconClicked = this.menuIconClicked.bind(this);
+  }
+
+  handleClickOutside() {
+    this.setState({ menuOpened: false });
   }
 
   slideMenu() {
@@ -39,4 +44,4 @@ class SideNavigation extends React.Component {
   }
 }
 
-export default SideNavigation;
+export default onClickOutside(SideNavigation);

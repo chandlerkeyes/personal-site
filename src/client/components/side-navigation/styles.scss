@@ -8,19 +8,24 @@
   background-color: $navy-blue;
   transition: all 1s ease;
   box-shadow: 8px 0 10px -6px black;
+
   .menu-icon {
     float: right;
-    padding-right: 20px;
+    padding-right: 10px;
+
     img {
       width: 30px;
     }
   }
+
   .container {
     margin: 30%;
+
     .links {
       padding-top: 50px;
       display: flex;
       flex-direction: column;
+
       a {
         color: $white;
         font-family: $yantra;
