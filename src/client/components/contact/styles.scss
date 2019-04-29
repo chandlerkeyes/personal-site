@@ -1,0 +1,38 @@
+@import 'src/client/constants/themes.scss';
+
+.contact {
+  .header {
+    width: 100%;
+    height: 300px;
+    background-color: $navy-blue;
+    text-align: center;
+    h1 {
+      padding-top: 100px;
+    }
+  }
+
+  .contact-form-container {
+    width: 100%;
+    background-color: $light;
+    .contact-form {
+      background-color: $dull;
+      width: 45%;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin: auto;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 500px;
+
+      input[type=text], textarea {
+        padding: 12px;
+        border: 1px solid $navy-blue;
+        border-radius: 4px;
+        resize: vertical;
+      }
+    }
+  }
+}
