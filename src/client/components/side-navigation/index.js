@@ -2,16 +2,21 @@ import React from 'react';
 import MenuItem from '../menu-item';
 import { PAGES } from '../../constants/routes.js';
 import './styles.scss';
-import NavigationMenuIcon from "../../assets/menu.svg";
+import { ASSETS } from "../../assets/";
+import onClickOutside from "react-onclickoutside";
 
 const CLOSE_MENU_MARGIN = -230;
 
-class Navigation extends React.Component {
+class SideNavigation extends React.Component {
   constructor(props) {
     super(props);
     
     this.state = { menuOpened: false };
     this.menuIconClicked = this.menuIconClicked.bind(this);
+  }
+
+  handleClickOutside() {
+    this.setState({ menuOpened: false });
   }
 
   slideMenu() {
@@ -24,8 +29,8 @@ class Navigation extends React.Component {
   
   render() {
     return (
-      <div className="navigation" style={this.slideMenu()}>
-        <div className="menu-icon"><img src={NavigationMenuIcon} alt="Menu Icon" onClick={() => { this.menuIconClicked() }} /></div>
+      <div className="side-navigation" style={this.slideMenu()}>
+        <div className="menu-icon"><img src={ASSETS.NAV_MENU_ICON} alt="Menu Icon" onClick={() => { this.menuIconClicked() }} /></div>
        <div className="container">
         <div className="links">
           <MenuItem to={PAGES.HOME} name="Home" />
@@ -39,4 +44,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default onClickOutside(SideNavigation);

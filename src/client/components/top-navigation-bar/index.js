@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
-import './styles.scss';
+import React from 'react';
+import { BREAKPOINTS } from "../../constants/breakpoints.js";
+import MediaQuery from 'react-responsive';
+import TopNavigationBarDesktop from './desktop';
+import TopNavigationBarMobile from './mobile';
+import "./styles.scss"
 
-class TopNavigationBar extends Component {
+class TopNavigationBar extends React.Component {
   render() {
     return (
-      <div className="top-navigation-bar">
-        <div className="top-navigation-bar-container">
-            <a className="top-nav-link" href="https://github.com/chandlerkeyes" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a className="top-nav-link" href="https://www.linkedin.com/in/chandlerkeyes/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a className="top-nav-link" href="https://www.youtube.com/channel/UCkeSKp49ycaZRlGKkCRRi1g" target="_blank" rel="noopener noreferrer">CodingWithChandler</a>
-        </div>
+      <div className="navigation">
+        <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
+          <TopNavigationBarDesktop/>
+        </MediaQuery>
+        <MediaQuery maxWidth={BREAKPOINTS.TABLET_MIN}>
+          <TopNavigationBarMobile/>
+        </MediaQuery>
       </div>
     );
   }
 }
 
-export default TopNavigationBar
+export default TopNavigationBar;
