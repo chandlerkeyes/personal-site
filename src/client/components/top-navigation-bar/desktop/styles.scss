@@ -1,14 +1,11 @@
 @import 'src/client/constants/fonts.scss';
 @import 'src/client/constants/themes.scss';
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
-.top-navigation-bar {
-  position: absolute;
-  top: 0;
+.top-navigation-bar-desktop {
   width: 100%;
   height: 60px;
   background-color: $navy-blue;
-  margin-right: 40px;
+  margin-right: 40px; 
 
   .top-navigation-bar-container {
     width: 95%;

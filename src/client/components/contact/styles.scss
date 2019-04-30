@@ -2,28 +2,26 @@
 @import 'src/client/constants/fonts.scss';
 
 .contact {
-  background-color: $light;
-  padding-top: 100px;
   .header {
-    margin: auto;
-    width: 51%;
-    height: 300px;
+    width: 100%;
+    margin: 40px auto;
+    width: 52.5%;
+    height: 100px;
     background-color: $pink;
     text-align: center;
     h1 {
+      padding-top: 15px;
       color: $navy-blue;
       font-size: 54px;
       font-family: $pt-sans;
-      padding-top: 140px;
     }
   }
 
   .contact-form-container {
     width: 100%;
-    padding: 50px 0;
     .contact-form {
       background-color: $navy-blue;
-      width: 45%;
+      width: 43.5%;
       padding-left: 50px;
       padding-right: 50px;
       margin: auto;
@@ -32,7 +30,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      height: 500px;
+      height: 400px;
 
       input[type=text], textarea {
         padding: 12px;
