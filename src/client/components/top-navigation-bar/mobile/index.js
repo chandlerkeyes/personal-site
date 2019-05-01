@@ -23,7 +23,6 @@ class TopNavigationBarMobile extends Component {
       <div className="top-navigation-bar-dropdown-items">
         <Link to={PAGES.HOME}>Home</Link>
         <Link to={PAGES.ABOUT}>About</Link>
-        <Link to={PAGES.TECH}>Tech</Link>
         <Link to={PAGES.CONTACT}>Contact</Link>
       </div>
     </Collapse>

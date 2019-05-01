@@ -1,8 +1,5 @@
-.body {
-  display: flex;
-  height: 100%;
-}
+@import 'src/client/constants/themes.scss';
 
-.content {
-  width: 100%;
+.body {
+  height: 100%;
 }

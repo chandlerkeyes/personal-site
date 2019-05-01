@@ -6,9 +6,7 @@ import { withRouter } from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (
-        <div className="app" id="app">
           <Body/>
-        </div>
     );
   }
 }

@@ -35,7 +35,6 @@ class SideNavigation extends React.Component {
         <div className="links">
           <MenuItem to={PAGES.HOME} name="Home" />
           <MenuItem to={PAGES.ABOUT} name="About" />
-          <MenuItem to={PAGES.TECH} name="Tech" />
           <MenuItem to={PAGES.CONTACT} name="Contact" />
         </div>
        </div>

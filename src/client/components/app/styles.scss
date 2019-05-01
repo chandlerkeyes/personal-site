@@ -1,11 +1,12 @@
 @import 'src/client/constants/themes.scss';
-
-.app {
-  height: 100%;
-}
+@import 'src/client/constants/fonts.scss';
 
 a {
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  margin: 0;
 }

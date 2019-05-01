@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.scss';
 import { PAGES } from '../../constants/routes';
 import About from '../about';
-import Tech from '../tech';
 import Contact from '../contact';
 import { Switch } from 'react-router-dom';
 import Home from '../home';
@@ -21,16 +20,13 @@ class Body extends React.Component {
         <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
           <SideNavigation/>
         </MediaQuery>
-        <div className="content">
-          <TopNavigationBar/>
+        <TopNavigationBar/>
           <Switch>
             <Route exact path={PAGES.HOME} component={Home}/>
             <Route exact path={PAGES.ABOUT} component={About}/>
-            <Route exact path={PAGES.TECH} component={Tech}/>
             <Route exact path={PAGES.CONTACT} component={Contact}/>
           </Switch>
           <Footer/>
-        </div>
       </div>
     );
   }

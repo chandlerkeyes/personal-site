@@ -1,0 +1,43 @@
+@import 'src/client/constants/themes.scss';
+@import 'src/client/constants/fonts.scss';
+
+.contact {
+  .header {
+    width: 100%;
+    margin: 40px auto;
+    width: 52.5%;
+    height: 100px;
+    background-color: $pink;
+    text-align: center;
+    h1 {
+      padding-top: 15px;
+      color: $navy-blue;
+      font-size: 54px;
+      font-family: $pt-sans;
+    }
+  }
+
+  .contact-form-container {
+    width: 100%;
+    .contact-form {
+      background-color: $navy-blue;
+      width: 43.5%;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin: auto;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 400px;
+
+      input[type=text], textarea {
+        padding: 12px;
+        border: 1px solid $navy-blue;
+        border-radius: 4px;
+        resize: vertical;
+      }
+    }
+  }
+}
