@@ -1,4 +1,5 @@
 @import 'src/client/constants/fonts.scss';
+@import 'src/client/constants/themes.scss';
 
 .about {
   .about-me-container {
@@ -27,6 +28,14 @@
         font-family: $montserrat;
         border: none;
       }
-    }                
+    }  
+    .work-experience-table, .education-table, .projects-table {
+      background-color: $light-grey;
+    } 
+
+    .about-me-content {
+      height: 230px;
+      overflow: scroll;
+    }         
   }
 }
