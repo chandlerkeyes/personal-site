@@ -12,5 +12,11 @@ h1 {
 }
 
 .colored-table-row {
-  background-color: #6C6F7D;
+  background-color:rgba(108, 111, 125, 0.5) ;
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+  font-family: $open-sans;
 }

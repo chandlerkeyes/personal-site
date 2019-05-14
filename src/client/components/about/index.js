@@ -20,7 +20,7 @@ class About extends React.Component {
       <tr>
         <th>Job Title</th>
         <th>Year</th>
-        <th>Description</th>
+        <th className="description-header">Description</th>
       </tr>
       <tr className="colored-table-row">
         <td>Interaction Gaming</td>
@@ -51,7 +51,7 @@ efficient as possible.</td>
       <tr>
         <th>School</th>
         <th>Year</th>
-        <th>Description</th>
+        <th className="description-header">Description</th>
       </tr>
       <tr className="colored-table-row">
         <td>Grand Circus</td>
@@ -81,10 +81,10 @@ efficient as possible.</td>
       <tr>
         <th>Project Name</th>
         <th>Link</th>
-        <th>Description</th>
+        <th className="description-header">Description</th>
       </tr>
-      <tr>
-        <td className="colored-table-row">Think With Color</td>
+      <tr className="colored-table-row">
+        <td>Think With Color</td>
         <td>2018-10</td>
         <td>I developed my own blog via WordPress where I upload tech related articles.</td>
       </tr>

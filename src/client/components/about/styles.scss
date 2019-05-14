@@ -3,7 +3,7 @@
 
 .about {
   .about-me-container {
-    width: 45%;
+    width: 55%;
     height: 500px;
     margin: auto;
     .header-title {  
@@ -32,6 +32,10 @@
     .work-experience-table, .education-table, .projects-table {
       background-color: $light-grey;
     } 
+
+    .description-header {
+      width: 60%;
+    }
 
     .about-me-content {
       height: 230px;
