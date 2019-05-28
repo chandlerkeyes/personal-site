@@ -1,8 +1,12 @@
 @import 'src/client/constants/fonts.scss';
 @import 'src/client/constants/themes.scss';
+@import 'src/client/constants/breakpoints.scss';
 
 .about {
   .about-me-container {
+    @media only screen and (max-width: $tablet-size) {
+        width: 85%;
+    }
     width: 55%;
     height: 500px;
     margin: auto;
