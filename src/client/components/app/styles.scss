@@ -10,3 +10,13 @@ a {
 h1 {
   margin: 0;
 }
+
+.colored-table-row {
+  background-color:rgba(108, 111, 125, 0.5) ;
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+  font-family: $open-sans;
+}
