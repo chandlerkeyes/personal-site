@@ -12,7 +12,7 @@ class TopNavigationBar extends React.Component {
         <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
           <TopNavigationBarDesktop/>
         </MediaQuery>
-        <MediaQuery maxWidth={BREAKPOINTS.TABLET_MIN}>
+        <MediaQuery maxWidth={BREAKPOINTS.TABLET_MIN - 1}>
           <TopNavigationBarMobile/>
         </MediaQuery>
       </div>

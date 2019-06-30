@@ -41,6 +41,12 @@ efficient as possible.</td>
         <td>17 hours of HTML, CSS, and SASS training per week.
         Assisted in developing websites for clients.</td>
       </tr>
+      <tr>
+        <td>Grand Circus Teacher & Teacher Assistant</td>
+        <td>2018-10</td>
+        <td>Grand Circus provides free Intro to Coding workshops for people who are interested in learning to code or join a coding bootcamp. I have been TAing at Grand Circus since 2018. This role involes answering questions students may have and helping students with coding exercises. 
+          I have taught my own class at Grand Circus for the first time in April 2019 and I still volunteer at Grand Circus when I can. In Intro to Coding, I teach the basics of JavaScript (variables, if statements, loops) and provide the students with exercises that will help them understand the basics of programming.</td>
+      </tr>
     </table>
     </div>
   }
@@ -82,6 +88,16 @@ efficient as possible.</td>
         <th>Project Name</th>
         <th>Link</th>
         <th className="description-header">Description</th>
+      </tr>
+      <tr className="colored-table-row">
+        <td>Interaction Gaming Website</td>
+        <td>2019-02</td>
+        <td>I developed www.interactiongaming.com. Tech stack includes: TypeScript, Nodejs, Reactjs, Redux, GraphQL, and Apollo. Because I integrated with Contentful's API, I can easily change the content displayed on the site with a few clicks!</td>
+      </tr>
+      <tr>
+        <td>Personal Site</td>
+        <td>2019-06</td>
+        <td>I developed this site with vanilla JavaScript, ReactJs, Redux, and with an ExpressJS backend.</td>
       </tr>
       <tr className="colored-table-row">
         <td>Think With Color</td>
