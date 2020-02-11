@@ -139,7 +139,7 @@ efficient as possible.</td>
     return (
       <div className="about">
         <div className="about-me-container">
-          <img className="header-image" src={ASSETS.ABOUT_ME} alt="About Me Image" />
+          <img className="header-image" src={ASSETS.ABOUT_ME} alt="About Me" />
           <h3 className="header-title">About Me</h3>
           <div className="about-me-navigation">
             <button onClick={() => {

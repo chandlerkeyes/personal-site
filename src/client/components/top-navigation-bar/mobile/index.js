@@ -36,13 +36,13 @@ class TopNavigationBarMobile extends Component {
           <div className="top-navigation-dropdown-icon">
             <img src={ASSETS.MOBILE_NAV_MENU_ICON} onClick={() => {
               this.setState({ menuOpened: !this.state.menuOpened });
-            }}/>
+            }} alt="Mobile Navigation Icon"/>
             {this.renderCollapsedMenu()}
           </div>
           <div className="top-navigation-bar-links">
-            <a className="top-nav-link" href="https://github.com/chandlerkeyes" target="_blank" rel="noopener noreferrer"><img src={ASSETS.GITHUB}/></a>
-            <a className="top-nav-link" href="https://www.linkedin.com/in/chandlerkeyes/" target="_blank" rel="noopener noreferrer"><img src={ASSETS.LINKEDIN}/></a>
-            <a className="top-nav-link" href="https://www.youtube.com/channel/UCkeSKp49ycaZRlGKkCRRi1g" target="_blank" rel="noopener noreferrer"><img src={ASSETS.YOUTUBE}/></a>
+            <a className="top-nav-link" href="https://github.com/chandlerkeyes" target="_blank" rel="noopener noreferrer"><img src={ASSETS.GITHUB} alt="GitHub Link"/></a>
+            <a className="top-nav-link" href="https://www.linkedin.com/in/chandlerkeyes/" target="_blank" rel="noopener noreferrer"><img src={ASSETS.LINKEDIN} alt="LinkedIn Link"/></a>
+            <a className="top-nav-link" href="https://www.youtube.com/channel/UCkeSKp49ycaZRlGKkCRRi1g" target="_blank" rel="noopener noreferrer"><img src={ASSETS.YOUTUBE} alt="YouTube Link"/></a>
           </div>
         </div>
         </div>
