@@ -23,15 +23,17 @@
   .contact-form-container {
     width: 100%;
     padding-bottom: 50px;
+    margin-top: 30px;
     .contact-form {
       padding-top: 30px;
       padding-bottom: 20px;
-      background-color: $neon;
+      background-color: $white;
       width: 50%;
       // padding-left: 50px;
       // padding-right: 50px;
       margin: auto;
       border-radius: 6px;
+      box-shadow: -1px -1px 31px -5px rgba(0,0,0,0.75);
     }
     .form {
       display: flex;
@@ -55,7 +57,7 @@
     input[type=submit] {
       margin: auto;
       border: none;
-      background-color: $navy-blue;
+      background-color: $neon;
       font-family: Roboto, sans-serif;
       font-weight: bold;
       font-size: 25px;
@@ -63,6 +65,7 @@
       padding: 20px 0;
       width: 50%;
       border-radius: 6px;
+      box-shadow: -1px -1px 31px -2px rgba(0,0,0,0.32);
     }
   }
 }
