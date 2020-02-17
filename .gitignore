@@ -24,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # files to ignore
-.config
+config.js
