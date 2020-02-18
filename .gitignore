@@ -25,3 +25,4 @@ yarn-error.log*
 
 # files to ignore
 config.js
+auth.js

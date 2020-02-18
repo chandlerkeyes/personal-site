@@ -24,6 +24,8 @@ const Contact = () => {
       message: message.value
     }
 
+    console.log('form params: ', formParams);
+
     fetch('http://localhost:3002/send',{
         method: "POST",
         body: JSON.stringify(formParams),
@@ -35,8 +37,7 @@ const Contact = () => {
     	(response) => (response.json())
        ).then((response)=>{
       if (response.status === 'success'){
-        alert("Message Sent."); 
-        this.resetForm()
+        alert("Message Sent.");
       }else if(response.status === 'fail'){
         alert("Message failed to send.")
       }
