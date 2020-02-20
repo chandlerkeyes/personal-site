@@ -24,21 +24,19 @@ const Contact = () => {
       message: message.value
     }
 
-    console.log('form params: ', formParams);
-
-    fetch('http://localhost:3002/send',{
-        method: "POST",
-        body: JSON.stringify(formParams),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }).then(
-    	(response) => (response.json())
-       ).then((response)=>{
-      if (response.status === 'success'){
+    fetch('http://localhost:3002/send', {
+      method: "POST",
+      body: JSON.stringify(formParams),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then(
+      (response) => (response.json())
+    ).then((response) => {
+      if (response.status === 'success') {
         alert("Message Sent.");
-      }else if(response.status === 'fail'){
+      } else if (response.status === 'fail') {
         alert("Message failed to send.")
       }
     })
@@ -49,16 +47,26 @@ const Contact = () => {
       <div className="header">
         <h1>Let's Talk Business</h1>
       </div>
-      <div className="contact-form-container">
-        <form className="contact-form form" onSubmit={handleSubmit}>
-          <label>First Name</label>
-          <input type="text" name="firstName" {...firstName} />
-          <label>Email</label>
-          <input type="text" name="email" {...email} />
-          <label>Message</label>
-          <textarea value="Message" {...message} />
-          <input type="submit" />
-        </form>
+      <div className="contact-form-content">
+        <div className="contact-info">
+            <h3>Media</h3>
+            <p><b>LinkedIn: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+            <p><b>ChandlerKnowsBest YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+            <p><b>CodingWithChandler YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+            <p><b>ThinkWithColor.com (Blog): </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+            <p><b>GitHub: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+        </div>
+        <div className="contact-form-container">
+          <form className="contact-form form" onSubmit={handleSubmit}>
+            <label>First Name</label>
+            <input type="text" name="firstName" {...firstName} />
+            <label>Email</label>
+            <input type="text" name="email" {...email} />
+            <label>Message</label>
+            <textarea value="Message" {...message} />
+            <input type="submit" />
+          </form>
+        </div>
       </div>
     </div>
   );
