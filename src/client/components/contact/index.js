@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles.scss';
+import { TRIANGLE } from '../../assets/triangle';
 
 export function useFormInput(initialValue) {
   const [value, setValue] = useState(initialValue);
@@ -49,21 +50,21 @@ const Contact = () => {
       </div>
       <div className="contact-form-content">
         <div className="contact-info">
-            <h3>Media</h3>
+          <div className="contact-info-container">
+            <h2>Feel free to reach out to me</h2>
             <p><b>LinkedIn: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>ChandlerKnowsBest YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>CodingWithChandler YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>ThinkWithColor.com (Blog): </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>GitHub: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+          </div>
         </div>
         <div className="contact-form-container">
+        <div className="triangle">{TRIANGLE}</div>
           <form className="contact-form form" onSubmit={handleSubmit}>
-            <label>First Name</label>
-            <input type="text" name="firstName" {...firstName} />
-            <label>Email</label>
-            <input type="text" name="email" {...email} />
-            <label>Message</label>
-            <textarea value="Message" {...message} />
+            <input type="text" name="firstName" value="First Name" onChange={firstName.onChange} />
+            <input type="text" name="email" value="Email" onChange={email.onChange} />
+            <textarea value="Message" onChange={message.onChange} />
             <input type="submit" />
           </form>
         </div>
