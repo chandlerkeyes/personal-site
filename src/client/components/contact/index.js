@@ -51,7 +51,7 @@ const Contact = () => {
       <div className="contact-form-content">
         <div className="contact-info">
           <div className="contact-info-container">
-            <h2>Feel free to reach out to me</h2>
+            <h1>Feel free to reach out to me</h1>
             <p><b>LinkedIn: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>ChandlerKnowsBest YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
             <p><b>CodingWithChandler YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>

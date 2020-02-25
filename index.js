@@ -32,7 +32,6 @@ transporter.set('oauth2_provision_cb', (user, renew, callback) => {
 
 
 transporter.verify((error, success) => {
-    console.log('VERIFYING');
     if (error) {
         console.log(error);
     } else {

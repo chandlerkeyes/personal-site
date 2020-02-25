@@ -4,7 +4,7 @@
 
 .about {
   .about-me-container {
-    @media only screen and (max-width: $tablet-size) {
+    @media only screen and (max-width: $tablet-min) {
         width: 85%;
     }
     width: 55%;

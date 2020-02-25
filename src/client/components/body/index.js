@@ -17,7 +17,7 @@ class Body extends React.Component {
   render() {
     return (
       <div className="body">
-        <MediaQuery minWidth={BREAKPOINTS.TABLET_MIN}>
+        <MediaQuery minWidth={BREAKPOINTS.TABLET_MID}>
           <SideNavigation/>
         </MediaQuery>
         <TopNavigationBar/>
