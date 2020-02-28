@@ -1,0 +1,49 @@
+@import 'src/client/constants/fonts.scss';
+@import 'src/client/constants/themes.scss';
+@import 'src/client/constants/breakpoints.scss';
+
+.about {
+  .about-me-container {
+    @media only screen and (max-width: $tablet-min) {
+        width: 85%;
+    }
+    width: 55%;
+    height: 500px;
+    margin: auto;
+    .header-title {  
+      font-family: $montserrat;
+      font-size: 30px;
+      padding-top: 30px;
+      margin: 0;
+    }
+    .header-image {
+      padding-top: 30px;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .about-me-navigation {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        padding: 0;
+        font-family: $montserrat;
+        border: none;
+      }
+    }  
+    .work-experience-table, .education-table, .projects-table {
+      background-color: $light-grey;
+    } 
+
+    .description-header {
+      width: 60%;
+    }
+
+    .about-me-content {
+      height: 230px;
+      overflow: scroll;
+    }         
+  }
+}

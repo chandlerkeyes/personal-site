@@ -1,0 +1,26 @@
+@import 'src/client/constants/themes.scss';
+@import 'src/client/constants/fonts.scss';
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.colored-table-row {
+  background-color:rgba(108, 111, 125, 0.5) ;
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+  font-family: $open-sans;
+}
+
+html {
+  background-color: #e6f7ff;
+}

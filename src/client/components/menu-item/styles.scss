@@ -1,0 +1,15 @@
+.menu-item {
+  height: 100px;
+  .active-menu-item {
+    position: relative;
+    .active {
+      img {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: -20px;
+        top: 16px;
+      }
+    }
+  }
+}
