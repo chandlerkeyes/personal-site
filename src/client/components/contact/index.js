@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import { TRIANGLE } from '../../assets/triangle';
+import MediaQuery from 'react-responsive';
+import { BREAKPOINTS } from '../../constants/breakpoints';
+import './styles.scss';
 
 export function useFormInput(initialValue) {
   const [value, setValue] = useState(initialValue);
@@ -10,6 +12,16 @@ export function useFormInput(initialValue) {
   return { value, onChange: handleChange };
 };
 
+const renderDesktopContactInfo = () => {
+  return (<div className="contact-info-container">
+    <h1>Feel free to reach out to me</h1>
+    <p><b>LinkedIn: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+    <p><b>ChandlerKnowsBest YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+    <p><b>CodingWithChandler YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+    <p><b>ThinkWithColor.com (Blog): </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+    <p><b>GitHub: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
+  </div>)
+}
 
 const Contact = () => {
   const firstName = useFormInput('')
@@ -50,17 +62,12 @@ const Contact = () => {
       </div>
       <div className="contact-form-content">
         <div className="contact-info">
-          <div className="contact-info-container">
-            <h1>Feel free to reach out to me</h1>
-            <p><b>LinkedIn: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
-            <p><b>ChandlerKnowsBest YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
-            <p><b>CodingWithChandler YouTube Channel: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
-            <p><b>ThinkWithColor.com (Blog): </b>https://www.linkedin.com/in/chandlerkeyes/</p>
-            <p><b>GitHub: </b>https://www.linkedin.com/in/chandlerkeyes/</p>
-          </div>
+          <MediaQuery minWidth={BREAKPOINTS.TABLET_MID}>
+            {renderDesktopContactInfo()}
+          </MediaQuery>
         </div>
         <div className="contact-form-container">
-        <div className="triangle">{TRIANGLE}</div>
+          <div className="triangle">{TRIANGLE}</div>
           <form className="contact-form form" onSubmit={handleSubmit}>
             <input type="text" name="firstName" value="First Name" onChange={firstName.onChange} />
             <input type="text" name="email" value="Email" onChange={email.onChange} />
