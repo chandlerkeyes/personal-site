@@ -7,7 +7,7 @@
   text-align: center;
   .header {
     width: 750px;
-    margin: 10px auto;
+    margin: 60px auto;
     height: 100px;
     background-color: #DA627D;
     border-radius: 6px;
@@ -16,7 +16,7 @@
 
     @media screen and (max-width: $tablet-max - 1) {
       width: 85%;
-      margin-top: 40px;
+      margin-top: 70px;
       margin-bottom: 10px;
 
       h1 {
